@@ -7,6 +7,7 @@
         color:purple
     }
 </style>
+<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body style= "font-size:20px; background-color: beige;">
@@ -92,7 +93,7 @@
         <h4>Fixed</h4>
         <p>Fixed positioning will position the object relative to the viewpoint of the website.</p>
         <div style="position: fixed; bottom:10px; right:10px; width:180px; height: 180px;">
-            <img src="images/plitopsis.png" width="180px" alt="Fixed positioning icon">
+            <img src="images/plitopsis.png" width="180px" alt="Fixed positioning icon" class="icon-animation">
         </div>
         <p>The icon on the bottom right of the screen is a fixed position image</p>
         <br/>
@@ -134,6 +135,32 @@
         <p>This will give all h5 text the color purple, without having to insert the attributes each time you use an h5</p>
         <br/>
         <hr/>
+        <h3>Classes and IDs</h3>
+        <h4>ID</h4>
+        <p>When styling through a .css file or a style tag, if you only want a certain object to have a certain style, you can give it an id: </p>
+        <p>id="blue-h1"</p>
+        <h1 id = "blue-h1">This text is blue due to an ID</h1>
+        <br/>
+        <h4>Classes</h4>
+        <p>A object can only have one ID, but many can share the same Class</p>
+        <h1 class="fancy-border">This text has a red border due to his Class</h1>
+        <h1 class="fancy-border">This text shares the same class as the previous one</h1>
+        <br/>
+        <hr>
+        <h3>Flexbox</h3>
+        <p>A Flexbox is a container that displays whatever's in it in a way that is flexible according to the window's dimentions. It can be used using a CSS class.</p>
+        <div class="flex-container container">
+            <div style="align-items: flex start;" class="box flex-item"><h1>1</h1></div>
+            <div class="box2 flex-item"><h1>2</h1></div>
+            <div class="box flex-item"><h1>3</h1></div>
+            <div class="box2 flex-item"><h1>4</h1></div>
+            <div class="box flex-item"><h1>5</h1></div>
+        </div>
+        <br/>
+        <hr/>
+        <h3>Animation</h3>
+        <p>This is an animation of a green square becoming a blue square using @keyframes and a CSS class.</p>
+        <div class="box-animation"  style=" position:relative;left:20px; width:150px; height:150px; background-color: pink;"></div>
 
 
     </main>
