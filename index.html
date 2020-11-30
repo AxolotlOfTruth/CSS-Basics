@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Basics</title>
+<style>    
+    h5{
+        color:purple
+    }
+</style>
+</head>
+
+<body style= "font-size:20px; background-color: beige;">
+
+    <header>
+        <h1>CSS Basics</h1>
+        <hr/>
+    </header>
+
+    <main>
+        <h3>Basic Inline Styling</h3>
+        <p style="color: blue;">This paragraph has a different color</p>
+        <p style="border: 1px solid black; width:100px">This paragraph has a black border</p>
+        <p style="border: 1px solid black; width:80%; max-width: 500px;">This paragraph has flexible a black border which will expand according to the screen size until its width reaches 500px</p>
+        <br/>
+        <hr/>
+        <h3>Margins and Padding</h3>
+        <p>Padding is extra space on the inside, while margins are extra space on the outside. You can notice the effect of them by looking at the colored background</p>
+        <h4>Padding</h4>
+        <div style="padding: 20px; background-color: lightblue;">
+            This text has padding.
+        </div>
+        <br/>
+        <div style="padding-top: 20px; background-color: lightblue;">
+            This text only has padding at its top.
+        </div>
+        <h4>Margin</h4>
+        <div style="margin:25px; background-color: lightblue;">
+            This text has a margin.
+        </div>
+        <div style="margin-top:50px; background-color: lightblue;">
+            This text only has a margin on its top.
+        </div>
+        <br/>
+        <hr/>
+        <h3>Display and Floats</h3>
+        <ul style = "float:left; background-color: lightblue; padding: 50px; margin: 0px;">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+            <li>Blogs</li>
+        </ul>
+        <p>You can use the CSS Float attribute to change the way something is displayed. As you can see, this text is now beside the list instead of under it</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <span>The span tag creates an inline element, which only takes as much space as it needs, unlike block elements, which take a whole block of the page. You can use the display attribute to change the default block display of something to inline.</span>
+        <br/>
+        <ul style = "background-color: lightblue; padding: 50px; margin: 0px;">
+            <li style = "display:inline;">Home</li>
+            <li style = "display:inline;">About</li>
+            <li style = "display:inline;">Contact Us</li>
+            <li style = "display:inline;">Blogs</li>
+        </ul>
+        <br/>
+        <hr/>
+        <h3>Position - Static, Relative, Absolute, and Fixed</h3>
+        <br/>
+        <h4>Static</h4>
+        <p>Static positioning takes whatever the position you specified in the HTML document and puts it on the web page.</p>
+        <div style="width:90px; height: 90px; background-color: blue;"></div>
+        <div style="width:90px; height: 90px; background-color: red;"></div>
+        <br/>
+        <br/>
+        <h4>Relative</h4>
+        <p>Relative positioning allows you to take an element and position it relatively to where it's supposed to be. So if a square is positioned under this text, relative positioning can change its location using its current location as a reference.</p>
+        <div style="position:relative; bottom:28px; width:90px; height:90px; background-color: darkblue;"></div>
+        <div style="position:relative; bottom:90px; width:90px; height: 90px; background-color: lime;"></div>
+        <p style="position:relative; bottom:90px">The blue square is 28 pixels higher than his main position, while the green one shows where the blue one should be.</p>
+        <h4>Absolute</h4>
+        <p>In absolute positioning, the element will position itself relative to the nearest positioned ancestor. Which means that the element will position itself relatively to its container, or the entire document</p>
+        <div style="position:absolute; bottom:-1550px; left:0px; width:90px; height:90px; background-color: red;font-size: 14px;">Absolute Square: Change your screen size to see it shift position</div>
+        <div style="position:absolute; bottom:-1550px; left:120px; width:90px; height: 90px; background-color: orange;font-size: 14px;">Absolute Square: Change your screen size to see it shift position</div>
+        <p>These squares are positioned with coordinates based on the size of the entire web page: bottom:-1550px; left:0px;, and bottom:-1550px; left:120px; respectively. This method of positioning holds no regard to the position of other things, unlike relative positioning, where the "original place" of the document is still there. Which means that these square's position can vary according to the window's size and zoom(intended position can be seen at 1980x1080 maximized window and 100% zoom)</p>
+     
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h4>Fixed</h4>
+        <p>Fixed positioning will position the object relative to the viewpoint of the website.</p>
+        <div style="position: fixed; bottom:10px; right:10px; width:180px; height: 180px;">
+            <img src="images/plitopsis.png" width="180px" alt="Fixed positioning icon">
+        </div>
+        <p>The icon on the bottom right of the screen is a fixed position image</p>
+        <br/>
+        <hr/>
+        <h3>Intermediate Styling</h3>
+        <br/>
+        <h4>Opacity</h4>
+        <h1 style="position:relative; top:100px; left:190px;">OPACITY</h1>
+        <img style="position:relative; bottom:100px; opacity: 0.5;" src="images/angry.png" alt="Image of petrified Saria">
+        <p style="position:relative; bottom:100px;">The image is on top of the text, but it is opaque, making the text readable.</p>
+        </hr>
+        <h3>Shadows and Borders</h3>
+        <p style="text-shadow: 2px 2px;">This text has an black shadow</p>
+        <p style="text-shadow: 3px 2px red;">This text has a red shadow</p>
+        <p style="text-shadow: 2px 2px 2px;">This text has a blurred shadow</p>
+        <p>This image has a shadow</p>
+        <img style="box-shadow: -5px 5px 5px;" src="images/shadow.jpg" alt="Image of photo being taken with shadow">
+        <p>This image has a border</p>
+        <img style="border-radius:5px;" src="images/border.jpg" alt="Image of fireworks with border">
+        <p>You can notice that the edges are not pointy like in the original image</p>
+        <img src="images/border.jpg" alt="Image of fireworks without border">
+        <br/>
+        <hr/>
+        <h3>Fonts and Text</h3>
+        <p>The following text used the font-family attribute to change font</p>
+        <p style="font-family:'Courier New', Courier, monospace">
+            Axolotls are also known as Mexican walking fish. Their name stems from an Aztec word meaning water dog or water monster. Axolotls have cylindrical bodies, short legs, a relatively long tail and feathery external gills. They have four toes on the front feet, five toes on the back feet and moveable eyelids.
+        </p>
+        <p>The following text used the font-variant small-caps attribute to change its layout, using small caps letters.</p>
+        <p style="font-variant: small-caps;">
+            Axolotls are also known as Mexican walking fish. Their name stems from an Aztec word meaning water dog or water monster. Axolotls have cylindrical bodies, short legs, a relatively long tail and feathery external gills. They have four toes on the front feet, five toes on the back feet and moveable eyelids.
+        </p>
+        <br/>
+        <hr/>
+        <h3>HTML Style Tags</h3>
+        <p>Style tags are another way of using CSS style attributes besides inline. You create two style tags and insert tag selectors, and then the attributes desired for the specific tag.</p>
+        <h5>This image show the code that makes this text purple</h5>
+        <img src="images/styletag.png">
+        <p>This will give all h5 text the color purple, without having to insert the attributes each time you use an h5</p>
+        <br/>
+        <hr/>
+
+
+    </main>
+
+    <footer>
+        <br/>
+        <br/>
+        <span>
+            This website was made by Gabriel Vérité for academic purposes
+            <img src="images/zima.png" width = 100px; alt="Zima holding grades">
+        <span>
+        
+    </footer>
+</body>
